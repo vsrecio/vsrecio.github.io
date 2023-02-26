@@ -120,8 +120,8 @@ params:
     enable: true
     intro: "Hi, my name is"
     title: "Victor S. Recio."
-    subtitle: "I build things for the web"
-    content: "A passionate web app developer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
+    subtitle: "I born to teach!"
+    content: "Victor S. Recio recognized in the technological communities for being an evangelist of Linux, Open Source, Containers/Kubernetes and Cloud Architecture, as well as for being a leader and wannabe golfer."
     image: /images/hero.svg
     # roundImage: true # Make hero image circular | default false
     button:
