@@ -103,7 +103,7 @@ params:
     enable: true
     intro: "Hi, my name is"
     title: "Victor S. Recio."
-    subtitle: "I born to teach!"
+    subtitle: "Born to be root!"
     content: "Victor S. Recio recognized in the technological communities for being an evangelist of Linux, Open Source, Containers/Kubernetes and Cloud Architecture, as well as for being a leader and wannabe golfer."
     image: /images/hero.svg
     # roundImage: true # Make hero image circular | default false
@@ -334,18 +334,18 @@ params:
   #   #   messageCaption: "Enter your message here"
 
   footer:
-    # recentPosts:
-    #   path: "blogs"
-    #   count: 3
-    #   title: Recent Posts
-    #   enable: true
-    #   disableFeaturedImage: false
-    socialNetworks:
-      github: https://github.com
-      linkedin: https://linkedin.com
-      twitter: https://twitter.com
-      instagram: https://instagram.com
-      facebook: https://facebook.com
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: true
+      disableFeaturedImage: false
+    # socialNetworks:
+    #   github: https://github.com
+    #   linkedin: https://linkedin.com
+    #   twitter: https://twitter.com
+    #   instagram: https://instagram.com
+    #   facebook: https://facebook.com
 
   # List pages like blogs and posts
   listPages:
