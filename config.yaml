@@ -1,10 +1,8 @@
-#URL Prod
-baseURL: "https://vsrecio.com"
-#URL REAL
+baseURL: "https://hugo-profile.netlify.app"
 languageCode: "en-us"
 title: "VSR Profile"
 theme: hugo-profile
-# Info Peronal of the Site
+
 outputs:
   home:
     - "HTML"
@@ -31,9 +29,9 @@ Menus:
       title: Blog posts
       url: /blogs
       weight: 1
-    - identifier: Conferences
+    - identifier: Videos
       name: Videos
-      title: Videos and Slide
+      title: Videos
       url: #
       weight: 2
 
@@ -58,7 +56,7 @@ params:
 
   theme:
     # disableThemeToggle: true
-    defaultTheme: "dark" # dark
+    # defaultTheme: "light" # dark
 
   font:
     fontSize: 1rem # default: 1rem
@@ -66,37 +64,21 @@ params:
     lineHeight: 1.5 # default: 1.5
     textAlign: left # default: left
 
-  # color preference
-  # color:
-  #   textColor:
-  #   secondaryTextColor:
-  #   backgroundColor:
-  #   secondaryBackgroundColor:
-  #   primaryColor:
-  #   secondaryColor:
-
-  #   darkmode:
-  #     textColor:
-  #     secondaryTextColor:
-  #     backgroundColor:
-  #     secondaryBackgroundColor:
-  #     primaryColor:
-  #     secondaryColor:
-
   # If you want to customize the menu, you can change it here
   navbar:
     align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
     # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
     # showBrandLogo: false # Show brand logo in nav bar | default is true
-    brandName: "VSR Profile" # Brand name for the brand | default is the title variable
+    brandName: "Hugo Profile" # Brand name for the brand | default is the title variable
     disableSearch: false
+    # searchPlaceholder: "Search"
     menus:
-      disableAbout: true
-      disableExperience: true
-      disableEducation: true
-      disableProjects: true
-      disableAchievements: true
-      disableContact: true
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
 
   # Hero
   hero:
@@ -123,20 +105,14 @@ params:
         - icon: /fav.png
           url: "https://example.com"
 
+  # footer:
+  #   recentPosts:
+  #     path: "blogs"
+  #     count: 3
+  #     title: Recent Posts
+  #     enable: true
+  #     disableFeaturedImage: false
 
-  footer:
-    recentPosts:
-      path: 'blogs'
-      count: 3
-      title: Recent Posts
-      enable: true
-      disableFeaturedImage: false
-    # socialNetworks:
-    #   github: https://github.com
-    #   linkedin: https://linkedin.com
-    #   twitter: https://twitter.com
-    #   instagram: https://instagram.com
-    #   facebook: https://facebook.com
 
   # List pages like blogs and posts
   listPages:
