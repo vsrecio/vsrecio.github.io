@@ -31,7 +31,7 @@
 <meta property="og:title" content="404 Page not found" />
 <meta property="og:description" content="Text about my cool site" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://vsrecio.github.io/404.html" /><meta property="og:site_name" content="Hugo Profile" />
+<meta property="og:url" content="https://hugo-profile.netlify.app/404.html" /><meta property="og:site_name" content="Hugo Profile" />
 
 
 <meta name="twitter:card" content="summary"/>
@@ -140,13 +140,13 @@ VSR Profile | Page not found
                 
                 <img src="/fav.png" width="30" height="30"
                     class="d-inline-block align-top">
-                VSR Profile
+                Hugo Profile
                 
             </a>
 
             
                 <div>
-                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder="Ctrl + k"
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder='Ctrl &#43; k to Search...'
                         aria-label="Search" oninput="searchOnChange(event)">
                 </div>
             
@@ -165,7 +165,7 @@ VSR Profile | Page not found
                     
                         <li class="nav-item navbar-text d-block d-md-none">
                             <div class="nav-link">
-                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder="Ctrl + k" aria-label="Search" oninput="searchOnChange(event)">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='Ctrl &#43; k to Search...' aria-label="Search" oninput="searchOnChange(event)">
                             </div>
                         </li>
                     
@@ -197,7 +197,7 @@ VSR Profile | Page not found
                     
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="" title="Videos and Slide">
+                        <a class="nav-link" href="" title="Videos">
                             
                             Videos
                         </a>
@@ -244,16 +244,6 @@ VSR Profile | Page not found
   </div><footer>
     <div class="container py-3" id="recent-posts">
     
-    
-    
-    
-    <div class="h3 text-center text-secondary py-3">
-        Recent Posts
-    </div>
-    <div class="row justify-content-center">
-        
-    </div>
-    
 </div><div class="text-center pt-2">
     
 
@@ -268,7 +258,7 @@ VSR Profile | Page not found
     <div class="row justify-content-center">
         <div class="col-md-4 text-center">
             <div class="pb-2">
-                <a href="https://vsrecio.github.io" title="VSR Profile">
+                <a href="https://hugo-profile.netlify.app" title="VSR Profile">
                     <img alt="Footer logo" src="/fav.png"
                         height="40px" width="40px">
                 </a>
@@ -289,10 +279,14 @@ VSR Profile | Page not found
     </div>
 </div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
 <script>
-    if (document.body.className.includes("light")) {
+    if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
-        localStorage.setItem("pref-theme", 'dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
     }
+
 </script>
 <script>
     document.getElementById("theme-toggle").addEventListener("click", () => {
