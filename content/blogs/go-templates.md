@@ -36,7 +36,7 @@ One of the most important steps in the administration of our containers is the v
 * MacAddress
 
 
-![alt text](/images/TERM_1.png "Optional Title")
+![alt text](/images/terminal_1.png "Optional Title")
 
 
 To enable emoji globally, set ```enableEmoji``` to ```true``` in your site’s [configuration](https://gohugo.io/getting-started/configuration/) and then you can type emoji shorthand codes directly in content files; e.g.
