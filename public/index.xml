@@ -18,15 +18,5 @@ Golang, also known simply as Go, is a modern programming language known for its 
 Go Templates are incredibly useful when it comes to managing and administering Docker containers and Kubernetes pods.</description>
     </item>
     
-    <item>
-      <title></title>
-      <link>https://hugo-profile.netlify.app/blogs/go/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hugo-profile.netlify.app/blogs/go/</guid>
-      <description>Master Your Containers with Go Templates, Docker, and Kubernetes Golang, also known simply as Go, is a modern programming language known for its simplicity, efficiency, and ease in handling concurrency. A powerful feature of Go that is often overlooked is Go Templates, which allow developers to generate dynamic content from static or dynamic data.
-Go Templates are incredibly useful when it comes to managing and administering Docker containers and Kubernetes pods.</description>
-    </item>
-    
   </channel>
 </rss>
