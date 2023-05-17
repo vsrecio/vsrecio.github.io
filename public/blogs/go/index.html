@@ -28,15 +28,19 @@
 
 
 
-<meta property="og:title" content="Golang" />
-<meta property="og:description" content="Text about my cool site" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://hugo-profile.netlify.app/tags/golang/" /><meta property="og:site_name" content="Hugo Profile" />
+<meta property="og:title" content="" />
+<meta property="og:description" content="Master Your Containers with Go Templates, Docker, and Kubernetes Golang, also known simply as Go, is a modern programming language known for its simplicity, efficiency, and ease in handling concurrency. A powerful feature of Go that is often overlooked is Go Templates, which allow developers to generate dynamic content from static or dynamic data.
+Go Templates are incredibly useful when it comes to managing and administering Docker containers and Kubernetes pods." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hugo-profile.netlify.app/blogs/go/" /><meta property="article:section" content="blogs" />
+
+<meta property="og:site_name" content="Hugo Profile" />
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Golang"/>
-<meta name="twitter:description" content="Text about my cool site"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Master Your Containers with Go Templates, Docker, and Kubernetes Golang, also known simply as Go, is a modern programming language known for its simplicity, efficiency, and ease in handling concurrency. A powerful feature of Go that is often overlooked is Go Templates, which allow developers to generate dynamic content from static or dynamic data.
+Go Templates are incredibly useful when it comes to managing and administering Docker containers and Kubernetes pods."/>
 
 
 <link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
@@ -100,11 +104,14 @@
     }
 </style>
 
-<meta name="description" content="Golang of VSR Profile">
-<link rel="stylesheet" href="/css/list.css" media="all">
+<meta name="description" content="">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-5/all-5.15.4.js"></script>
 
   <title>
-Golang | VSR Profile
+ | VSR Profile
 
   </title>
 </head>
@@ -237,44 +244,141 @@ Golang | VSR Profile
     </nav>
 </header>
 <div id="content">
-<div class="container pt-5" id="list-page">
-    <h2 class="text-center pb-2">Golang</h2>
-    <div class="row">
-        
-        <div class="col-lg-4 col-md-6 my-3">
-            <div class="card-columns">
-                <div class="card h-100">
-                    
-                    <div class="card-header">
-                        <a href="/blogs/go-templates/">
-                            <img src="/images/gotemplate.png" class="card-img-top" alt="Go Templates for Containers">
-                        </a>
-                    </div>
-                    
-                    <div class="card-body bg-transparent p-4 shadow-sm">
-                        <a href="/blogs/go-templates/" class="primary-font card-title">
-                            <h5 class="card-title bg-transparent" title="Go Templates for Containers">Go Templates for …</h5>
-                        </a>
-                        <div class="card-text secondary-font">
-                            <p>Golang allows us to manage our containers more effectively. :zap:
-Golang, also known simply as Go, is a modern programming language known for its simplicity, efficiency, and ease in handling concurrency. A powerful feature of Go that is often overlooked is Go Templates, which allow developers to …</p>
-                        </div>
-                    </div>
-                    <div class="mt-auto post-footer bg-transparent py-3">
-                        <span class="float-start bg-transparent">May 17, 2021</span>
-                        <a href="/blogs/go-templates/" class="float-end btn btn-outline-info btn-sm">Read</a>
-                    </div>
-                </div>
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4"></h1>
+            <div class="text-center">
+               
+              <small>|</small>
+              Jan 1, 0001
+
+              
+              <span id="readingTime">
+                min read
+              </span>
+              
             </div>
+          </div>
+          
+          <article class="page-content  p-2">
+          <h1 id="master-your-containers-with-go-templates-docker-and-kubernetes">Master Your Containers with Go Templates, Docker, and Kubernetes</h1>
+<p>Golang, also known simply as Go, is a modern programming language known for its simplicity, efficiency, and ease in handling concurrency. A powerful feature of Go that is often overlooked is Go Templates, which allow developers to generate dynamic content from static or dynamic data.</p>
+<p>Go Templates are incredibly useful when it comes to managing and administering Docker containers and Kubernetes pods. In this article, we will explore how to use Go Templates to do just that.</p>
+<h2 id="what-are-go-templates">What are Go Templates?</h2>
+<p>Go Templates provide a simple and flexible way to generate dynamic content in Go. They are particularly useful for building dynamic configuration files, reports, HTML, and more.</p>
+<p>A Go Template is a string or file that can interpret and substitute variables and can even execute simple functions. For example, the following is a simple Go Template:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{.<span style="color:#a6e22e">Count</span>}} <span style="color:#a6e22e">items</span> <span style="color:#a6e22e">are</span> <span style="color:#a6e22e">made</span> <span style="color:#a6e22e">of</span> {{.<span style="color:#a6e22e">Material</span>}}
+</span></span></code></pre></div><p>In this template, <code>.Count</code> and <code>.Material</code> are variables that can be substituted with real values.</p>
+<h2 id="go-templates-in-docker">Go Templates in Docker</h2>
+<p>Docker uses a variant of Go Templates in several places, but one of the most useful is in the <code>docker inspect</code> command, which allows you to view the details of a container or image.</p>
+<p>For example, if we want to get the IP address of a running container, we can use a Go Template with the <code>docker inspect</code> command as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker inspect -f <span style="color:#e6db74">&#39;{{.NetworkSettings.IPAddress}}&#39;</span> my_container
+</span></span></code></pre></div><p>In this case, the Go Template <code>{{.NetworkSettings.IPAddress}}</code> extracts the IP address of the <code>my_container</code> container.</p>
+<h2 id="go-templates-in-kubernetes">Go Templates in Kubernetes</h2>
+<p>Kubernetes also makes extensive use of Go Templates, especially in combination with the <code>kubectl</code> command-line tool.</p>
+<p>For example, if we want to get the status of all pods in a specific namespace, we can use a Go Template with the <code>kubectl get pods</code> command as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get pods -n my_namespace -o jsonpath<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{.items[*].status.phase}&#34;</span>
+</span></span></code></pre></div><p>In this case, the Go Template <code>{.items[*].status.phase}</code> generates a list of the statuses of all pods in the <code>my_namespace</code> namespace.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Go Templates are a powerful and flexible feature of Go that can greatly facilitate the management and administration of Docker containers and Kubernetes pods. By allowing the generation of dynamic content, Go Templates give us the ability to extract and manipulate information in a way that would be much more difficult to do manually.</p>
+<p>Therefore, if you&rsquo;re working with Docker or Kubernetes, I encourage you to dive deeper into Go Templates. Not only will they help you get the most out of these tools, but they will also give you a new way of thinking about programming in Go.</p>
+
+          </article>
         </div>
-        
-        <div class="row justify-content-center">
-            <div class="col-auto m-3">
-                
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-are-go-templates">What are Go Templates?</a></li>
+    <li><a href="#go-templates-in-docker">Go Templates in Docker</a></li>
+    <li><a href="#go-templates-in-kubernetes">Go Templates in Kubernetes</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://twitter.com/share?text=&url=https%3a%2f%2fhugo-profile.netlify.app%2fblogs%2fgo%2f">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=: https%3a%2f%2fhugo-profile.netlify.app%2fblogs%2fgo%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='mailto:?subject=&amp;body=Check%20out%20this%20site https%3a%2f%2fhugo-profile.netlify.app%2fblogs%2fgo%2f'>
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
             </div>
+          </aside>
+          
         </div>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
+<Script src="/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+
+
+<script src="/js/readingTime.js"></script>
+
+
 
   </div><footer>
     <div class="container py-3" id="recent-posts">

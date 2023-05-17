@@ -3,28 +3,30 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://hugo-profile.netlify.app/blogs/</loc>
-    <lastmod>2021-04-03T22:53:58+05:30</lastmod>
+    <lastmod>2021-05-17T22:53:58+05:30</lastmod>
   </url><url>
     <loc>https://hugo-profile.netlify.app/tags/containers/</loc>
-    <lastmod>2021-04-03T22:53:58+05:30</lastmod>
+    <lastmod>2021-05-17T22:53:58+05:30</lastmod>
   </url><url>
     <loc>https://hugo-profile.netlify.app/tags/docker/</loc>
-    <lastmod>2021-04-03T22:53:58+05:30</lastmod>
+    <lastmod>2021-05-17T22:53:58+05:30</lastmod>
   </url><url>
     <loc>https://hugo-profile.netlify.app/blogs/go-templates/</loc>
-    <lastmod>2021-04-03T22:53:58+05:30</lastmod>
+    <lastmod>2021-05-17T22:53:58+05:30</lastmod>
   </url><url>
     <loc>https://hugo-profile.netlify.app/tags/golang/</loc>
-    <lastmod>2021-04-03T22:53:58+05:30</lastmod>
+    <lastmod>2021-05-17T22:53:58+05:30</lastmod>
   </url><url>
     <loc>https://hugo-profile.netlify.app/tags/kubernetes/</loc>
-    <lastmod>2021-04-03T22:53:58+05:30</lastmod>
+    <lastmod>2021-05-17T22:53:58+05:30</lastmod>
   </url><url>
     <loc>https://hugo-profile.netlify.app/tags/</loc>
-    <lastmod>2021-04-03T22:53:58+05:30</lastmod>
+    <lastmod>2021-05-17T22:53:58+05:30</lastmod>
   </url><url>
     <loc>https://hugo-profile.netlify.app/</loc>
-    <lastmod>2021-04-03T22:53:58+05:30</lastmod>
+    <lastmod>2021-05-17T22:53:58+05:30</lastmod>
+  </url><url>
+    <loc>https://hugo-profile.netlify.app/blogs/go/</loc>
   </url><url>
     <loc>https://hugo-profile.netlify.app/categories/</loc>
   </url>
