@@ -1,7 +1,7 @@
 ---
 title: "Demystify Helm: The GPS for Navigating the World of Kubernetes."
 date: 2023-05-22T14:24:59-04:00
-draft: true
+draft: false
 github_link: "https://github.com/vsrecio/vsrecio.github.io"
 author: "Victor S. Recio"
 tags:

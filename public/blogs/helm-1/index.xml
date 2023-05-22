@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Demystify Helm: The GPS for Navigating the World of Kubernetes. on VSR Profile</title>
+    <link>https://hugo-profile.netlify.app/blogs/helm-1/</link>
+    <description>Recent content in Demystify Helm: The GPS for Navigating the World of Kubernetes. on VSR Profile</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 22 May 2023 14:24:59 -0400</lastBuildDate><atom:link href="https://hugo-profile.netlify.app/blogs/helm-1/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
