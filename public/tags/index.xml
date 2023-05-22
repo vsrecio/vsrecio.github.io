@@ -6,13 +6,58 @@
     <description>Recent content in Tags on VSR Profile</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 17 May 2021 22:53:58 +0530</lastBuildDate><atom:link href="https://hugo-profile.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 May 2023 14:24:59 -0400</lastBuildDate><atom:link href="https://hugo-profile.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Containers</title>
       <link>https://hugo-profile.netlify.app/tags/containers/</link>
-      <pubDate>Mon, 17 May 2021 22:53:58 +0530</pubDate>
+      <pubDate>Mon, 22 May 2023 14:24:59 -0400</pubDate>
       
       <guid>https://hugo-profile.netlify.app/tags/containers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deployment</title>
+      <link>https://hugo-profile.netlify.app/tags/deployment/</link>
+      <pubDate>Mon, 22 May 2023 14:24:59 -0400</pubDate>
+      
+      <guid>https://hugo-profile.netlify.app/tags/deployment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DevOps</title>
+      <link>https://hugo-profile.netlify.app/tags/devops/</link>
+      <pubDate>Mon, 22 May 2023 14:24:59 -0400</pubDate>
+      
+      <guid>https://hugo-profile.netlify.app/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Golang Template</title>
+      <link>https://hugo-profile.netlify.app/tags/golang-template/</link>
+      <pubDate>Mon, 22 May 2023 14:24:59 -0400</pubDate>
+      
+      <guid>https://hugo-profile.netlify.app/tags/golang-template/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Helm</title>
+      <link>https://hugo-profile.netlify.app/tags/helm/</link>
+      <pubDate>Mon, 22 May 2023 14:24:59 -0400</pubDate>
+      
+      <guid>https://hugo-profile.netlify.app/tags/helm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>https://hugo-profile.netlify.app/tags/kubernetes/</link>
+      <pubDate>Mon, 22 May 2023 14:24:59 -0400</pubDate>
+      
+      <guid>https://hugo-profile.netlify.app/tags/kubernetes/</guid>
       <description></description>
     </item>
     
@@ -35,11 +80,11 @@
     </item>
     
     <item>
-      <title>Kubernetes</title>
-      <link>https://hugo-profile.netlify.app/tags/kubernetes/</link>
-      <pubDate>Mon, 17 May 2021 22:53:58 +0530</pubDate>
+      <title>CI/CD</title>
+      <link>https://hugo-profile.netlify.app/tags/ci/cd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo-profile.netlify.app/tags/kubernetes/</guid>
+      <guid>https://hugo-profile.netlify.app/tags/ci/cd/</guid>
       <description></description>
     </item>
     

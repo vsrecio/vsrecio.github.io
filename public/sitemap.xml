@@ -3,10 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://hugo-profile.netlify.app/blogs/</loc>
-    <lastmod>2021-05-17T22:53:58+05:30</lastmod>
+    <lastmod>2023-05-22T14:24:59-04:00</lastmod>
   </url><url>
     <loc>https://hugo-profile.netlify.app/tags/containers/</loc>
-    <lastmod>2021-05-17T22:53:58+05:30</lastmod>
+    <lastmod>2023-05-22T14:24:59-04:00</lastmod>
+  </url><url>
+    <loc>https://hugo-profile.netlify.app/blogs/helm-1/</loc>
+    <lastmod>2023-05-22T14:24:59-04:00</lastmod>
+  </url><url>
+    <loc>https://hugo-profile.netlify.app/tags/deployment/</loc>
+    <lastmod>2023-05-22T14:24:59-04:00</lastmod>
+  </url><url>
+    <loc>https://hugo-profile.netlify.app/tags/devops/</loc>
+    <lastmod>2023-05-22T14:24:59-04:00</lastmod>
+  </url><url>
+    <loc>https://hugo-profile.netlify.app/tags/golang-template/</loc>
+    <lastmod>2023-05-22T14:24:59-04:00</lastmod>
+  </url><url>
+    <loc>https://hugo-profile.netlify.app/tags/helm/</loc>
+    <lastmod>2023-05-22T14:24:59-04:00</lastmod>
+  </url><url>
+    <loc>https://hugo-profile.netlify.app/tags/kubernetes/</loc>
+    <lastmod>2023-05-22T14:24:59-04:00</lastmod>
+  </url><url>
+    <loc>https://hugo-profile.netlify.app/tags/</loc>
+    <lastmod>2023-05-22T14:24:59-04:00</lastmod>
+  </url><url>
+    <loc>https://hugo-profile.netlify.app/</loc>
+    <lastmod>2023-05-22T14:24:59-04:00</lastmod>
   </url><url>
     <loc>https://hugo-profile.netlify.app/tags/docker/</loc>
     <lastmod>2021-05-17T22:53:58+05:30</lastmod>
@@ -17,15 +41,8 @@
     <loc>https://hugo-profile.netlify.app/tags/golang/</loc>
     <lastmod>2021-05-17T22:53:58+05:30</lastmod>
   </url><url>
-    <loc>https://hugo-profile.netlify.app/tags/kubernetes/</loc>
-    <lastmod>2021-05-17T22:53:58+05:30</lastmod>
-  </url><url>
-    <loc>https://hugo-profile.netlify.app/tags/</loc>
-    <lastmod>2021-05-17T22:53:58+05:30</lastmod>
-  </url><url>
-    <loc>https://hugo-profile.netlify.app/</loc>
-    <lastmod>2021-05-17T22:53:58+05:30</lastmod>
-  </url><url>
     <loc>https://hugo-profile.netlify.app/categories/</loc>
+  </url><url>
+    <loc>https://hugo-profile.netlify.app/tags/ci/cd/</loc>
   </url>
 </urlset>

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:title" content="Demystify Helm: The GPS for Navigating the World of Kubernetes." />
+<meta property="og:description" content="If you&rsquo;ve worked with Kubernetes, you&rsquo;ll know that managing it and deploying applications can be complex. With so many components to configure and manage, such as services, pods, and persistent volumes, it&rsquo;s easy to get lost in the sea of options available and If we add that we must also deploy these components to different environments, all this increases the degree of difficulty of managing Kubernetes. . This is where Helm comes into play." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hugo-profile.netlify.app/blogs/helm-1/" /><meta property="article:section" content="blogs" />
+<meta property="article:published_time" content="2023-05-22T14:24:59-04:00" />
+<meta property="article:modified_time" content="2023-05-22T14:24:59-04:00" /><meta property="og:site_name" content="Hugo Profile" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Demystify Helm: The GPS for Navigating the World of Kubernetes."/>
+<meta name="twitter:description" content="If you&rsquo;ve worked with Kubernetes, you&rsquo;ll know that managing it and deploying applications can be complex. With so many components to configure and manage, such as services, pods, and persistent volumes, it&rsquo;s easy to get lost in the sea of options available and If we add that we must also deploy these components to different environments, all this increases the degree of difficulty of managing Kubernetes. . This is where Helm comes into play."/>
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+
+
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        width: .5em;
+        height: .5em;
+        background-color: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px var(--background-color);
+        border-radius: 1rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+<meta name="description" content="">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-5/all-5.15.4.js"></script>
+
+  <title>
+Demystify Helm: The GPS for Navigating the World of Kubernetes. | VSR Profile
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+<header>
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/fav.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                Hugo Profile
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder='Ctrl &#43; k to Search...'
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='Ctrl &#43; k to Search...' aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/blogs" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="" title="Videos">
+                            
+                            Videos
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">Demystify Helm: The GPS for Navigating the World of Kubernetes.</h1>
+            <div class="text-center">
+              Victor S. Recio 
+              <small>|</small>
+              May 22, 2023
+
+              
+              <span id="readingTime">
+                min read
+              </span>
+              
+            </div>
+          </div>
+          
+          <div class="featured-image">
+            <img class="img-fluid" src="/images/helm.png" alt="Demystify Helm: The GPS for Navigating the World of Kubernetes.">
+          </div>
+          
+          <article class="page-content  p-2">
+          <p>If you&rsquo;ve worked with Kubernetes, you&rsquo;ll know that managing it and deploying applications can be complex. With so many components to configure and manage, such as services, pods, and persistent volumes, it&rsquo;s easy to get lost in the sea of options available and If we add that we must also deploy these components to different environments, all this increases the degree of difficulty of managing Kubernetes. . This is where Helm comes into play.</p>
+<p>Helm, often referred to as the package manager for Kubernetes <strong>(in Linux world is like APT, YUM&hellip;)</strong>, acts like a GPS, guiding you through the complexity of Kubernetes. With Helm, managing Kubernetes applications is simplified, allowing you to define, install, and upgrade even the most complex Kubernetes applications.</p>
+<p>In this article, we will demystify Helm and break it down into simple, understandable terms. Whether you&rsquo;re new to Kubernetes or a seasoned veteran looking for ways to optimize your workflows, this post aims to give you a greater understanding of how Helm can make navigating the vast ocean of Kubernetes easier.</p>
+<h2 id="what-is-helm-chart">What is Helm Chart?</h2>
+<p>A Helm Chart is a package of pre-configured Kubernetes resources. In other words, it is a collection of files that describe a related set of Kubernetes resources. These charts are used to deploy applications or services on a Kubernetes cluster.</p>
+<p>Helm Charts make extensive use of <strong><a href="https://vsrecio.com/blogs/go-templates/">Go templates</a></strong> to define the Kubernetes resources they manage. Go templates are a powerful way to inject configuration into Kubernetes resources at deploy time.</p>
+<p><strong>YAML</strong>, which stands for <strong>&ldquo;YAML Ain&rsquo;t Markup Language&rdquo;</strong>, is another essential component in the world of Kubernetes and Helm. Kubernetes uses YAML as the format for its resource definitions. These definitions describe the desired state of your Kubernetes resources such as Deployments, Services, and PersistentVolumes among others.</p>
+<p>A single chart can describe something simple, like a standalone web server or something complex like a full-stack web application with backend services, databases, caches, etc.</p>
+<p>The <strong>chart</strong> is a bundle of information necessary to create an instance of a Kubernetes application. This includes the following:</p>
+<ul>
+<li>A description of the package <strong>(Chart.yaml)</strong></li>
+<li>One or more <strong>templates</strong>, which contain Kubernetes manifest files</li>
+<li>Default values for the templates <strong>(values.yaml)</strong></li>
+</ul>
+<p>The charts are convenient because they allow you to deploy, version, share, and publish applications in a standard format. They encapsulate and build an artifact of your application, making the complexity of deploying sophisticated applications into Kubernetes easier, and enabling more straightforward application management, updates, and configuration.</p>
+<h2 id="what-is-helm-chart-1">What is Helm Chart?</h2>
+<p>A Helm chart is essentially a packaged application for Kubernetes and has a specific directory structure. Here&rsquo;s the basic structure of a Helm chart:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>vsrchart/
+</span></span><span style="display:flex;"><span>  Chart.yaml          <span style="color:#75715e"># A YAML file containing information about the chart</span>
+</span></span><span style="display:flex;"><span>  LICENSE             <span style="color:#75715e"># OPTIONAL: A plain text file containing the license for the chart</span>
+</span></span><span style="display:flex;"><span>  README.md           <span style="color:#75715e"># OPTIONAL: A human-readable README file</span>
+</span></span><span style="display:flex;"><span>  values.yaml         <span style="color:#75715e"># The default configuration values for this chart</span>
+</span></span><span style="display:flex;"><span>  values.schema.json  <span style="color:#75715e"># OPTIONAL: A JSON Schema for imposing a structure on the values.yaml file</span>
+</span></span><span style="display:flex;"><span>  charts/             <span style="color:#75715e"># A directory containing any charts upon which this chart depends.</span>
+</span></span><span style="display:flex;"><span>  crds/               <span style="color:#75715e"># OPTIONAL: Custom Resource Definitions</span>
+</span></span><span style="display:flex;"><span>  templates/          <span style="color:#75715e"># A directory of templates that, when combined with values, will generate valid Kubernetes manifest files.</span>
+</span></span><span style="display:flex;"><span>  templates/NOTES.txt <span style="color:#75715e"># OPTIONAL: A plain text file containing short usage notes</span>
+</span></span></code></pre></div><p><em>1. <strong>Chart.yaml:</strong></em> This is a mandatory file that contains the metadata of the chart like the version, description, and maintainer information.</p>
+<p><em>2. <strong>values.yaml</strong></em>: This file contains the default configuration values for the chart. Values from this file can be overridden during <code>helm install</code> or <code>helm upgrade</code>.</p>
+<p><em>3. <strong>templates:</strong></em> This directory holds all of the templated Kubernetes manifest files. The templates generate Kubernetes manifest files when combined with the <code>values.yaml</code> file. These files are written in the Go templating language.</p>
+<p><em>4. <strong>charts:</strong></em> If a chart has dependencies, those dependent charts are stored in this directory.</p>
+<p><em>5. <strong>crds:</strong></em> This directory is used to hold Custom Resource Definitions (CRDs). CRDs are Kubernetes extensions that are used to deploy certain applications.</p>
+<p><em>6. <strong>.helmignore:</strong></em> Like a <code>.gitignore</code> file, this file can be used to specify files or directories to be ignored when packaging a chart.</p>
+<p><em>7. <strong>LICENSE and README.md:</strong></em> The license of the chart and a README providing high-level information about the chart, respectively. These are optional but generally recommended.</p>
+</ul>
+This structure makes Helm charts organized and easier to manage, even when they start to get complex.
+<p>The <code>templates/</code> directory within a Helm Chart is where the Kubernetes manifest files are stored. The files in this directory are templated using the Go templating language. Here&rsquo;s a basic example of what you might find inside the <code>templates/</code> directory:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>|-- templates
+</span></span><span style="display:flex;"><span>|   |-- NOTES.txt
+</span></span><span style="display:flex;"><span>|   |-- _helpers.tpl
+</span></span><span style="display:flex;"><span>|   |-- deployment.yaml
+</span></span><span style="display:flex;"><span>|   |-- configmap.yaml
+</span></span><span style="display:flex;"><span>|   |-- ingress.yaml
+</span></span><span style="display:flex;"><span>|   |-- service.yaml
+</span></span><span style="display:flex;"><span>|   <span style="color:#e6db74">`</span>-- tests
+</span></span><span style="display:flex;"><span>|       <span style="color:#e6db74">`</span>-- test-connection.yaml
+</span></span></code></pre></div><p><em>1. <strong>NOTES.txt</strong></em>: This is a plain text file that contains usage notes for your chart. After helm install, these notes can be printed to the console.</p>
+<p><em>2. <strong>_helpers.tpl</strong></em>: This is a place to put template helpers that you can re-use throughout the chart. This helps avoid repetitive code and makes maintenance easier.</p>
+<p><em>3. <strong>deployment.yaml</strong></em>: This defines a Kubernetes Deployment. It specifies which Docker image to use for the Docker containers in the pods, the number of replicas, and various other necessary pieces of information.</p>
+<p><em>4. <strong>service.yaml</strong></em>: This defines a Kubernetes Service. It helps expose your application (as running in the pods created by the deployment) to the outside world or internally within the cluster.</p>
+<p><em>5. <strong>ingress.yaml</strong></em>: This defines a Kubernetes Ingress. Ingresses manage external access to the services in a cluster, typically through HTTP.</p>
+<p><em>6. <strong>hpa.yaml</strong></em>: This defines a Kubernetes Horizontal Pod Autoscaler. It automatically scales the number of pods in a deployment or replica set based on observed CPU utilization.</p>
+<p>Note that you can include other Kubernetes resources such as ConfigMaps, Secrets, Jobs, etc., depending on the needs of your application. The actual files will depend on the complexity and requirements of your specific application.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In conclusion, we have taken our first steps into the world of Helm and Kubernetes, beginning our journey to truly harness the power of these groundbreaking tools. We&rsquo;ve explored what Helm is, why it&rsquo;s an essential tool in Kubernetes management, and have started to understand its components, such as Helm Charts and their structure.</p>
+<p>But this is just the beginning. As we&rsquo;ve seen, Helm Charts play a pivotal role in managing Kubernetes applications. They encapsulate all the Kubernetes resources and dependencies necessary for running an application in a Kubernetes cluster, effectively serving as a roadmap for application deployment.</p>
+<p>In this first part of our series, we&rsquo;ve laid the groundwork, providing you with the necessary understanding and context about Helm. As you&rsquo;ve seen, Helm truly is the GPS for navigating the complex world of Kubernetes, and its charts provide a reliable and reusable methodology for defining, installing, and upgrading even the most complex Kubernetes applications.</p>
+<p>Thank you for reading, and we hope you&rsquo;ll join us in our next exciting exploration of Helm. Until then, happy charting!</p>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-helm-chart">What is Helm Chart?</a></li>
+    <li><a href="#what-is-helm-chart-1">What is Helm Chart?</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              <li class="list-inline-item"><a href="https://hugo-profile.netlify.app/tags/containers" target="_blank">Containers</a></li>
+              
+              <li class="list-inline-item"><a href="https://hugo-profile.netlify.app/tags/golang-template" target="_blank">Golang Template</a></li>
+              
+              <li class="list-inline-item"><a href="https://hugo-profile.netlify.app/tags/helm" target="_blank">Helm</a></li>
+              
+              <li class="list-inline-item"><a href="https://hugo-profile.netlify.app/tags/kubernetes" target="_blank">Kubernetes</a></li>
+              
+              <li class="list-inline-item"><a href="https://hugo-profile.netlify.app/tags/devops" target="_blank">DevOps</a></li>
+              
+              <li class="list-inline-item"><a href="https://hugo-profile.netlify.app/tags/ci/cd" target="_blank">CI/CD</a></li>
+              
+              <li class="list-inline-item"><a href="https://hugo-profile.netlify.app/tags/deployment" target="_blank">Deployment</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://twitter.com/share?text=Demystify%20Helm%3a%20The%20GPS%20for%20Navigating%20the%20World%20of%20Kubernetes.&url=https%3a%2f%2fhugo-profile.netlify.app%2fblogs%2fhelm-1%2f">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=Demystify%20Helm%3a%20The%20GPS%20for%20Navigating%20the%20World%20of%20Kubernetes.: https%3a%2f%2fhugo-profile.netlify.app%2fblogs%2fhelm-1%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='mailto:?subject=Demystify%20Helm%3a%20The%20GPS%20for%20Navigating%20the%20World%20of%20Kubernetes.&amp;body=Check%20out%20this%20site https%3a%2f%2fhugo-profile.netlify.app%2fblogs%2fhelm-1%2f'>
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<Script src="/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+
+
+<script src="/js/readingTime.js"></script>
+
+
+
+  </div><footer>
+    <div class="container py-3" id="recent-posts">
+    
+</div><div class="text-center pt-2">
+    
+
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <div class="pb-2">
+                <a href="https://hugo-profile.netlify.app" title="VSR Profile">
+                    <img alt="Footer logo" src="/fav.png"
+                        height="40px" width="40px">
+                </a>
+            </div>
+            &copy; 2023  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>
