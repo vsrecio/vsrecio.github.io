@@ -6,7 +6,18 @@
     <description>Recent content in Blogs on VSR Profile</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 22 May 2023 14:24:59 -0400</lastBuildDate><atom:link href="https://hugo-profile.netlify.app/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 May 2023 14:27:35 -0400</lastBuildDate><atom:link href="https://hugo-profile.netlify.app/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Demystify Helm: Managing</title>
+      <link>https://hugo-profile.netlify.app/blogs/helm-2/</link>
+      <pubDate>Mon, 29 May 2023 14:27:35 -0400</pubDate>
+      
+      <guid>https://hugo-profile.netlify.app/blogs/helm-2/</guid>
+      <description>In order to continue with our series of articles about Helm package manager, you need to first install it on your system. If you&amp;rsquo;re running Linux, the process is straightforward. Here&amp;rsquo;s a step-by-step guide:
+Step 1: Prerequisites Ensure that you have the following installed and correctly configured:
+ Kubernetes: Helm is a package manager for Kubernetes, so you must have a Kubernetes cluster running.  minikube: minikube is local Kubernetes, focusing on making it easy to learn and develop for Kubernetes.</description>
+    </item>
+    
     <item>
       <title>Demystify Helm: Introduction</title>
       <link>https://hugo-profile.netlify.app/blogs/helm-1/</link>
