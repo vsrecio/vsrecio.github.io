@@ -6,7 +6,18 @@
     <description>Recent content in DevOps on VSR Profile</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 May 2023 14:27:35 -0400</lastBuildDate><atom:link href="https://hugo-profile.netlify.app/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 Jul 2023 11:57:48 -0400</lastBuildDate><atom:link href="https://hugo-profile.netlify.app/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create a Helm Chart Repository using Github</title>
+      <link>https://hugo-profile.netlify.app/blogs/helm-3/</link>
+      <pubDate>Tue, 04 Jul 2023 11:57:48 -0400</pubDate>
+      
+      <guid>https://hugo-profile.netlify.app/blogs/helm-3/</guid>
+      <description>Create a Helm Chart Repository using Github Helm, the package manager for Kubernetes, allows developers to package, version, and share applications. Helm charts streamline the process of defining, installing, and upgrading complex Kubernetes applications. In this article, we&amp;rsquo;ll guide you on how to create a Helm chart and host it using GitHub Pages.
+Creating a Helm Chart Let&amp;rsquo;s start with creating a Helm chart:
+1. Installation: First, you need to have Helm installed.</description>
+    </item>
+    
     <item>
       <title>Demystify Helm: Managing</title>
       <link>https://hugo-profile.netlify.app/blogs/helm-2/</link>
