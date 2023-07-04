@@ -17,6 +17,7 @@ description: ""
 toc: 
 ---
 # Installing Helm
+
 In order to continue with our series of articles about Helm package manager, you need to first install it on your system. If you're running Linux, the process is straightforward. Here's a step-by-step guide:
 
 **Step 1: Prerequisites**
