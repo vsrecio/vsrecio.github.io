@@ -29,9 +29,7 @@
 
 
 <meta property="og:title" content="Create a Helm Chart Repository using Github" />
-<meta property="og:description" content="Create a Helm Chart Repository using Github Helm, the package manager for Kubernetes, allows developers to package, version, and share applications. Helm charts streamline the process of defining, installing, and upgrading complex Kubernetes applications. In this article, we&rsquo;ll guide you on how to create a Helm chart and host it using GitHub Pages.
-Creating a Helm Chart Let&rsquo;s start with creating a Helm chart:
-1. Installation: First, you need to have Helm installed." />
+<meta property="og:description" content="Create a Helm Chart Repository using Github A Helm Chart Repository is simply a place where Helm Charts are stored and shared. Charts are packages of Kubernetes resource descriptions, i.e., they are the smallest deployable and manageable unit of Helm. A Helm Chart Repository is quite similar to package repositories from other package management systems, such as those used by npm (for Node.js) or apt (for Debian/Ubuntu). Like these, Helm repositories allow sharing applications as packages." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://hugo-profile.netlify.app/blogs/helm-3/" /><meta property="article:section" content="blogs" />
 <meta property="article:published_time" content="2023-07-04T11:57:48-04:00" />
@@ -40,9 +38,7 @@ Creating a Helm Chart Let&rsquo;s start with creating a Helm chart:
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Create a Helm Chart Repository using Github"/>
-<meta name="twitter:description" content="Create a Helm Chart Repository using Github Helm, the package manager for Kubernetes, allows developers to package, version, and share applications. Helm charts streamline the process of defining, installing, and upgrading complex Kubernetes applications. In this article, we&rsquo;ll guide you on how to create a Helm chart and host it using GitHub Pages.
-Creating a Helm Chart Let&rsquo;s start with creating a Helm chart:
-1. Installation: First, you need to have Helm installed."/>
+<meta name="twitter:description" content="Create a Helm Chart Repository using Github A Helm Chart Repository is simply a place where Helm Charts are stored and shared. Charts are packages of Kubernetes resource descriptions, i.e., they are the smallest deployable and manageable unit of Helm. A Helm Chart Repository is quite similar to package repositories from other package management systems, such as those used by npm (for Node.js) or apt (for Debian/Ubuntu). Like these, Helm repositories allow sharing applications as packages."/>
 
 
 <link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
@@ -272,7 +268,26 @@ Create a Helm Chart Repository using Github | VSR Profile
           
           <article class="page-content  p-2">
           <h1 id="create-a-helm-chart-repository-using-github">Create a Helm Chart Repository using Github</h1>
+<p>A Helm Chart Repository is simply a place where Helm Charts are stored and shared. Charts are packages of Kubernetes resource descriptions, i.e., they are the smallest deployable and manageable unit of Helm. A Helm Chart Repository is quite similar to package repositories from other package management systems, such as those used by npm (for Node.js) or apt (for Debian/Ubuntu). Like these, Helm repositories allow sharing applications as packages.</p>
+<p>Helm repositories can be either local (hosted on your own infrastructure) or remote (hosted on services like <strong>Google Cloud Storage, Amazon S3, GitHub Pages</strong>, etc.). These repositories contain chart files, which are typically in tar.gz format, and an &lsquo;index.yaml&rsquo; file that contains information about the charts, like what versions are available and where to find them.</p>
+<p>Developers and systems operators can search a Helm repository to find existing charts that suit their needs, or they can publish their own charts for others to use.</p>
 <p>Helm, the package manager for Kubernetes, allows developers to package, version, and share applications. Helm charts streamline the process of defining, installing, and upgrading complex Kubernetes applications. In this article, we&rsquo;ll guide you on how to create a Helm chart and host it using GitHub Pages.</p>
+<h2 id="understanding-helm-chart-repositories">Understanding Helm Chart Repositories</h2>
+<p>Helm chart repositories are used for publishing Helm charts and making them available to a wide community of Helm users. This is conceptually similar to the repositories that are used in Linux package management, such as RPM or Debian repositories, in which packages are installed using tools such as dnf or apt-get. Public Helm chart repositories can be found at Artifact Hub (<a href="https://artifacthub.io">https://artifacthub.io</a>). A Helm chart repository is created using one of two high-level implementations:</p>
+<ul>
+<li>An HTTP server</li>
+<li>An OCI registry</li>
+</ul>
+<p>With Helm Chart Repositories, Kubernetes users have a wide array of existing charts at their fingertips, ready for deployment. Developers can search a repository for the right chart to suit their application requirements. Additionally, these repositories serve as the platform for developers to share their own charts with the wider Kubernetes community, fostering a culture of collaboration and sharing.</p>
+<p>A repository that’s been created using an HTTP server must consist of the following components:</p>
+<ul>
+<li>Helm charts, packaged as .tgz archives</li>
+<li>An index.yaml file, containing metadata about the charts contained in the repository</li>
+</ul>
+<p>Besides HTTP, the other type of repository a Helm chart maintainer can distribute charts to is an <strong>Open Container Initiative (OCI)</strong> registry. OCI is an open governance structure for creating open standards for container runtimes and formats. Artifacts is an OCI initiative that allows you to store and serve additional content, such as Helm charts, within container registries aside from container images. Since images and their registries are already a fundamental construct in both Kubernetes and Helm, the ability to leverage the same registry to store both container images and Helm charts reduces the amount of effort needed by Helm maintainers to publish charts. We will explore publishing Helm charts using OCI registries in greater detail in the Publishing to an OCI registry section. In the next section, we’ll publish our Guestbook Helm chart to GitHub Pages. Here, you will get an understanding of how a basic Helm chart repository is created and interacted with.</p>
+<blockquote>
+<p>This content block was created using the book <a href="https://github.com/PacktPublishing/Managing-Kubernetes-Resources-using-Helm">Managing Kubernetes Resources Using Helm!</a>!</p>
+</blockquote>
 <h2 id="creating-a-helm-chart">Creating a Helm Chart</h2>
 <p>Let&rsquo;s start with creating a Helm chart:</p>
 <p><strong>1. Installation</strong>: First, you need to have Helm installed. If you haven&rsquo;t done so yet, you can find the instructions <a href="https://helm.sh/docs/intro/install/">here</a>.</p>
@@ -283,20 +298,32 @@ Create a Helm Chart Repository using Github | VSR Profile
 <h2 id="creating-github-pages">Creating GitHub Pages</h2>
 <p>Now, let&rsquo;s create the GitHub Pages:</p>
 <p>You can use GitHub Pages to showcase some open source projects, host a blog, or even share your résumé. This guide will help get you started on creating your next website. <a href="https://docs.github.com/en/pages/quickstart">Link text Here</a></p>
-<h2 id="creating-the-helm-package">Creating the Helm Package</h2>
-<p>After setting up GitHub Pages, it&rsquo;s time to create the Helm package:</p>
+<h2 id="publishing-the-the-chart">Publishing the the chart</h2>
+<p>Publishing a Helm chart to an HTTP repository consists of a three-step process:</p>
+<ol>
+<li>Packaging the Helm chart as a .tgz archive</li>
+<li>Generating an index.yaml file</li>
+<li>Uploading the .tgz archive and the index.yaml file to the server</li>
+</ol>
+<p>First, you can use the helm package command to package your chart into a .tgz archive and update dependencies be necessary. After setting up GitHub Pages, it&rsquo;s time to create the Helm package:</p>
 <p><strong>1. Chart Packaging</strong>: Go to your chart directory and use the following command to create a packaged chart:</p>
-<pre tabindex="0"><code>helm package mychart
+<pre tabindex="0"><code>helm dependency update mychart 
+</code></pre><pre tabindex="0"><code>helm package mychart --dependency-update
 </code></pre><p>This command will create a .tgz file which includes all the necessary files to deploy your application.</p>
 <p><strong>2. Index Creation</strong>: We need to create an index file that will contain information about chart packages, and where to locate them. Use this command to generate it:</p>
-<pre tabindex="0"><code>helm repo index --url https://&lt;username&gt;.github.io/&lt;repository&gt;/ .
+<pre tabindex="0"><code>cp  cp mychart-0.1.0.tgz &lt;GitHub Pages repository clone&gt;-0.1.0.tgz &lt;GitHub Pages repository clone&gt;
+</code></pre><pre tabindex="0"><code>helm repo index --url https://&lt;username&gt;.github.io/&lt;repository&gt;/ .
 </code></pre><p>Replace <code>&lt;username&gt;</code> with your GitHub username and <code>&lt;repository&gt;</code> with your GitHub repository name.</p>
 <p><img src="/images/repo.png" alt="alt text" title="Repository"></p>
 <h2 id="uploading-the-chart-to-the-repository">Uploading the Chart to the Repository</h2>
 <p>The final step is to upload your Helm chart to your repository:</p>
+<p><img src="/images/repo-2.png" alt="alt text" title="Repository"></p>
 <p><strong>1. Add Files to the Repository</strong>: Add the .tgz file and <code>index.yaml</code> file to your GitHub repository.</p>
 <p><strong>2. Commit and Push</strong>: Commit these changes and push them to the <code>master</code> or <code>main</code> branch.</p>
-<p><strong>3. Verify</strong>: To verify that your Helm chart is accessible, you can add your new repo to Helm with this command:</p>
+<pre tabindex="0"><code>git add .
+git commit -m &#34;Chart&#34;
+git push origin main
+</code></pre><p><strong>3. Verify</strong>: To verify that your Helm chart is accessible, you can add your new repo to Helm with this command:</p>
 <pre tabindex="0"><code>helm repo add myrepo https://&lt;username&gt;.github.io/&lt;repository&gt;/
 </code></pre><p>Congratulations! You&rsquo;ve successfully created a Helm chart and hosted it on GitHub Pages. Now, other users can easily access and use your Helm chart by adding your Helm repository.</p>
 
@@ -313,9 +340,10 @@ Create a Helm Chart Repository using Github | VSR Profile
               <div class="toc-content">
                 <nav id="TableOfContents">
   <ul>
+    <li><a href="#understanding-helm-chart-repositories">Understanding Helm Chart Repositories</a></li>
     <li><a href="#creating-a-helm-chart">Creating a Helm Chart</a></li>
     <li><a href="#creating-github-pages">Creating GitHub Pages</a></li>
-    <li><a href="#creating-the-helm-package">Creating the Helm Package</a></li>
+    <li><a href="#publishing-the-the-chart">Publishing the the chart</a></li>
     <li><a href="#uploading-the-chart-to-the-repository">Uploading the Chart to the Repository</a></li>
   </ul>
 </nav>
