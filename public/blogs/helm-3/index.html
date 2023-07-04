@@ -28,15 +28,21 @@
 
 
 
-<meta property="og:title" content="CI/CD" />
-<meta property="og:description" content="Text about my cool site" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://hugo-profile.netlify.app/tags/ci/cd/" /><meta property="og:site_name" content="VSR" />
+<meta property="og:title" content="Create a Helm Chart Repository using Github" />
+<meta property="og:description" content="Create a Helm Chart Repository using Github Helm, the package manager for Kubernetes, allows developers to package, version, and share applications. Helm charts streamline the process of defining, installing, and upgrading complex Kubernetes applications. In this article, we&rsquo;ll guide you on how to create a Helm chart and host it using GitHub Pages.
+Creating a Helm Chart Let&rsquo;s start with creating a Helm chart:
+1. Installation: First, you need to have Helm installed." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hugo-profile.netlify.app/blogs/helm-3/" /><meta property="article:section" content="blogs" />
+<meta property="article:published_time" content="2023-07-04T11:57:48-04:00" />
+<meta property="article:modified_time" content="2023-07-04T11:57:48-04:00" /><meta property="og:site_name" content="VSR" />
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="CI/CD"/>
-<meta name="twitter:description" content="Text about my cool site"/>
+<meta name="twitter:title" content="Create a Helm Chart Repository using Github"/>
+<meta name="twitter:description" content="Create a Helm Chart Repository using Github Helm, the package manager for Kubernetes, allows developers to package, version, and share applications. Helm charts streamline the process of defining, installing, and upgrading complex Kubernetes applications. In this article, we&rsquo;ll guide you on how to create a Helm chart and host it using GitHub Pages.
+Creating a Helm Chart Let&rsquo;s start with creating a Helm chart:
+1. Installation: First, you need to have Helm installed."/>
 
 
 <link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
@@ -100,11 +106,14 @@
     }
 </style>
 
-<meta name="description" content="CI/CD of VSR Profile">
-<link rel="stylesheet" href="/css/list.css" media="all">
+<meta name="description" content="">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-5/all-5.15.4.js"></script>
 
   <title>
-CI/CD | VSR Profile
+Create a Helm Chart Repository using Github | VSR Profile
 
   </title>
 </head>
@@ -237,96 +246,173 @@ CI/CD | VSR Profile
     </nav>
 </header>
 <div id="content">
-<div class="container pt-5" id="list-page">
-    <h2 class="text-center pb-2">CI/CD</h2>
-    <div class="row">
-        
-        <div class="col-lg-4 col-md-6 my-3">
-            <div class="card-columns">
-                <div class="card h-100">
-                    
-                    <div class="card-header">
-                        <a href="/blogs/helm-3/">
-                            <img src="/images/helm-3.png" class="card-img-top" alt="Create a Helm Chart Repository using Github">
-                        </a>
-                    </div>
-                    
-                    <div class="card-body bg-transparent p-4 shadow-sm">
-                        <a href="/blogs/helm-3/" class="primary-font card-title">
-                            <h5 class="card-title bg-transparent" title="Create a Helm Chart Repository using Github">Create a Helm Chart …</h5>
-                        </a>
-                        <div class="card-text secondary-font">
-                            <p>Create a Helm Chart Repository using Github Helm, the package manager for Kubernetes, allows developers to package, version, and share applications. Helm charts streamline the process of defining, installing, and upgrading complex Kubernetes applications. In this article, we&rsquo;ll guide you on …</p>
-                        </div>
-                    </div>
-                    <div class="mt-auto post-footer bg-transparent py-3">
-                        <span class="float-start bg-transparent">Jul 4, 2023</span>
-                        <a href="/blogs/helm-3/" class="float-end btn btn-outline-info btn-sm">Read</a>
-                    </div>
-                </div>
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">Create a Helm Chart Repository using Github</h1>
+            <div class="text-center">
+              Victor S. Recio 
+              <small>|</small>
+              Jul 4, 2023
+
+              
+              <span id="readingTime">
+                min read
+              </span>
+              
             </div>
+          </div>
+          
+          <div class="featured-image">
+            <img class="img-fluid" src="/images/helm-3.png" alt="Create a Helm Chart Repository using Github">
+          </div>
+          
+          <article class="page-content  p-2">
+          <h1 id="create-a-helm-chart-repository-using-github">Create a Helm Chart Repository using Github</h1>
+<p>Helm, the package manager for Kubernetes, allows developers to package, version, and share applications. Helm charts streamline the process of defining, installing, and upgrading complex Kubernetes applications. In this article, we&rsquo;ll guide you on how to create a Helm chart and host it using GitHub Pages.</p>
+<h2 id="creating-a-helm-chart">Creating a Helm Chart</h2>
+<p>Let&rsquo;s start with creating a Helm chart:</p>
+<p><strong>1. Installation</strong>: First, you need to have Helm installed. If you haven&rsquo;t done so yet, you can find the instructions <a href="https://helm.sh/docs/intro/install/">here</a>.</p>
+<p><strong>2. Chart Creation</strong>: Now, let&rsquo;s create a basic chart with the following command:</p>
+<pre tabindex="0"><code>helm create mychart
+</code></pre><p>This will generate a directory with the necessary files to create a Helm chart.</p>
+<p><strong>3. Customization</strong>: Inside the <code>mychart</code> directory, you&rsquo;ll find several YAML files that you can modify according to your application requirements. For instance, the <code>values.yaml</code> file is where you specify the default configuration values, while <code>Chart.yaml</code> contains metadata about the chart itself.</p>
+<h2 id="creating-github-pages">Creating GitHub Pages</h2>
+<p>Now, let&rsquo;s create the GitHub Pages:</p>
+<p>You can use GitHub Pages to showcase some open source projects, host a blog, or even share your résumé. This guide will help get you started on creating your next website. <a href="https://docs.github.com/en/pages/quickstart">Link text Here</a></p>
+<h2 id="creating-the-helm-package">Creating the Helm Package</h2>
+<p>After setting up GitHub Pages, it&rsquo;s time to create the Helm package:</p>
+<p><strong>1. Chart Packaging</strong>: Go to your chart directory and use the following command to create a packaged chart:</p>
+<pre tabindex="0"><code>helm package mychart
+</code></pre><p>This command will create a .tgz file which includes all the necessary files to deploy your application.</p>
+<p><strong>2. Index Creation</strong>: We need to create an index file that will contain information about chart packages, and where to locate them. Use this command to generate it:</p>
+<pre tabindex="0"><code>helm repo index --url https://&lt;username&gt;.github.io/&lt;repository&gt;/ .
+</code></pre><p>Replace <code>&lt;username&gt;</code> with your GitHub username and <code>&lt;repository&gt;</code> with your GitHub repository name.</p>
+<p><img src="/images/repo.png" alt="alt text" title="Repository"></p>
+<h2 id="uploading-the-chart-to-the-repository">Uploading the Chart to the Repository</h2>
+<p>The final step is to upload your Helm chart to your repository:</p>
+<p><strong>1. Add Files to the Repository</strong>: Add the .tgz file and <code>index.yaml</code> file to your GitHub repository.</p>
+<p><strong>2. Commit and Push</strong>: Commit these changes and push them to the <code>master</code> or <code>main</code> branch.</p>
+<p><strong>3. Verify</strong>: To verify that your Helm chart is accessible, you can add your new repo to Helm with this command:</p>
+<pre tabindex="0"><code>helm repo add myrepo https://&lt;username&gt;.github.io/&lt;repository&gt;/
+</code></pre><p>Congratulations! You&rsquo;ve successfully created a Helm chart and hosted it on GitHub Pages. Now, other users can easily access and use your Helm chart by adding your Helm repository.</p>
+
+          </article>
         </div>
-        
-        <div class="col-lg-4 col-md-6 my-3">
-            <div class="card-columns">
-                <div class="card h-100">
-                    
-                    <div class="card-header">
-                        <a href="/blogs/helm-2/">
-                            <img src="/images/helm-2.png" class="card-img-top" alt="Demystify Helm: Managing">
-                        </a>
-                    </div>
-                    
-                    <div class="card-body bg-transparent p-4 shadow-sm">
-                        <a href="/blogs/helm-2/" class="primary-font card-title">
-                            <h5 class="card-title bg-transparent" title="Demystify Helm: Managing">Demystify Helm: Managing</h5>
-                        </a>
-                        <div class="card-text secondary-font">
-                            <p>Installing Helm In order to continue with our series of articles about Helm package manager, you need to first install it on your system. If you&rsquo;re running Linux, the process is straightforward. Here&rsquo;s a step-by-step guide:
-Step 1: Prerequisites Ensure that you have the following …</p>
-                        </div>
-                    </div>
-                    <div class="mt-auto post-footer bg-transparent py-3">
-                        <span class="float-start bg-transparent">May 29, 2023</span>
-                        <a href="/blogs/helm-2/" class="float-end btn btn-outline-info btn-sm">Read</a>
-                    </div>
-                </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#creating-a-helm-chart">Creating a Helm Chart</a></li>
+    <li><a href="#creating-github-pages">Creating GitHub Pages</a></li>
+    <li><a href="#creating-the-helm-package">Creating the Helm Package</a></li>
+    <li><a href="#uploading-the-chart-to-the-repository">Uploading the Chart to the Repository</a></li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              <li class="list-inline-item"><a href="https://hugo-profile.netlify.app/tags/containers" target="_blank">Containers</a></li>
+              
+              <li class="list-inline-item"><a href="https://hugo-profile.netlify.app/tags/golang-template" target="_blank">Golang Template</a></li>
+              
+              <li class="list-inline-item"><a href="https://hugo-profile.netlify.app/tags/helm" target="_blank">Helm</a></li>
+              
+              <li class="list-inline-item"><a href="https://hugo-profile.netlify.app/tags/kubernetes" target="_blank">Kubernetes</a></li>
+              
+              <li class="list-inline-item"><a href="https://hugo-profile.netlify.app/tags/devops" target="_blank">DevOps</a></li>
+              
+              <li class="list-inline-item"><a href="https://hugo-profile.netlify.app/tags/ci/cd" target="_blank">CI/CD</a></li>
+              
+              <li class="list-inline-item"><a href="https://hugo-profile.netlify.app/tags/deployment" target="_blank">Deployment</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://twitter.com/share?text=Create%20a%20Helm%20Chart%20Repository%20using%20Github&url=https%3a%2f%2fhugo-profile.netlify.app%2fblogs%2fhelm-3%2f">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=Create%20a%20Helm%20Chart%20Repository%20using%20Github: https%3a%2f%2fhugo-profile.netlify.app%2fblogs%2fhelm-3%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='mailto:?subject=Create%20a%20Helm%20Chart%20Repository%20using%20Github&amp;body=Check%20out%20this%20site https%3a%2f%2fhugo-profile.netlify.app%2fblogs%2fhelm-3%2f'>
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
             </div>
+          </aside>
+          
         </div>
-        
-        <div class="col-lg-4 col-md-6 my-3">
-            <div class="card-columns">
-                <div class="card h-100">
-                    
-                    <div class="card-header">
-                        <a href="/blogs/helm-1/">
-                            <img src="/images/helm.png" class="card-img-top" alt="Demystify Helm: Introduction">
-                        </a>
-                    </div>
-                    
-                    <div class="card-body bg-transparent p-4 shadow-sm">
-                        <a href="/blogs/helm-1/" class="primary-font card-title">
-                            <h5 class="card-title bg-transparent" title="Demystify Helm: Introduction">Demystify Helm: …</h5>
-                        </a>
-                        <div class="card-text secondary-font">
-                            <p>If you&rsquo;ve worked with Kubernetes, you&rsquo;ll know that managing it and deploying applications can be complex. With so many components to configure and manage, such as services, pods, and persistent volumes, it&rsquo;s easy to get lost in the sea of options available and If we add that we …</p>
-                        </div>
-                    </div>
-                    <div class="mt-auto post-footer bg-transparent py-3">
-                        <span class="float-start bg-transparent">May 22, 2023</span>
-                        <a href="/blogs/helm-1/" class="float-end btn btn-outline-info btn-sm">Read</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row justify-content-center">
-            <div class="col-auto m-3">
-                
-            </div>
-        </div>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
+<Script src="/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+
+
+<script src="/js/readingTime.js"></script>
+
+
 
   </div><footer>
     <div class="container py-3" id="recent-posts">
