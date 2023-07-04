@@ -1,5 +1,5 @@
 ---
-title: "Helm 3"
+title: "Create a Helm Chart Repository using Github"
 date: 2023-07-04T11:57:48-04:00
 draft: true
 github_link: "https://github.com/vsrecio/vsrecio.github.io"
@@ -16,7 +16,7 @@ image: /images/helm-3.png
 description: ""
 toc: 
 ---
-# How to Create a Helm Chart and Host it on GitHub Pages
+# Create a Helm Chart Repository using Github
 
 Helm, the package manager for Kubernetes, allows developers to package, version, and share applications. Helm charts streamline the process of defining, installing, and upgrading complex Kubernetes applications. In this article, we'll guide you on how to create a Helm chart and host it using GitHub Pages.
 
