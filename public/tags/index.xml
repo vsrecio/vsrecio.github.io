@@ -2,89 +2,89 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on VSR Profile</title>
-    <link>https://hugo-profile.netlify.app/tags/</link>
+    <link>https://vsrecio.com/tags/</link>
     <description>Recent content in Tags on VSR Profile</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Jul 2023 11:57:48 -0400</lastBuildDate><atom:link href="https://hugo-profile.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 Jul 2023 11:57:48 -0400</lastBuildDate><atom:link href="https://vsrecio.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Containers</title>
-      <link>https://hugo-profile.netlify.app/tags/containers/</link>
+      <link>https://vsrecio.com/tags/containers/</link>
       <pubDate>Tue, 04 Jul 2023 11:57:48 -0400</pubDate>
       
-      <guid>https://hugo-profile.netlify.app/tags/containers/</guid>
+      <guid>https://vsrecio.com/tags/containers/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Deployment</title>
-      <link>https://hugo-profile.netlify.app/tags/deployment/</link>
+      <link>https://vsrecio.com/tags/deployment/</link>
       <pubDate>Tue, 04 Jul 2023 11:57:48 -0400</pubDate>
       
-      <guid>https://hugo-profile.netlify.app/tags/deployment/</guid>
+      <guid>https://vsrecio.com/tags/deployment/</guid>
       <description></description>
     </item>
     
     <item>
       <title>DevOps</title>
-      <link>https://hugo-profile.netlify.app/tags/devops/</link>
+      <link>https://vsrecio.com/tags/devops/</link>
       <pubDate>Tue, 04 Jul 2023 11:57:48 -0400</pubDate>
       
-      <guid>https://hugo-profile.netlify.app/tags/devops/</guid>
+      <guid>https://vsrecio.com/tags/devops/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Golang Template</title>
-      <link>https://hugo-profile.netlify.app/tags/golang-template/</link>
+      <link>https://vsrecio.com/tags/golang-template/</link>
       <pubDate>Tue, 04 Jul 2023 11:57:48 -0400</pubDate>
       
-      <guid>https://hugo-profile.netlify.app/tags/golang-template/</guid>
+      <guid>https://vsrecio.com/tags/golang-template/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Helm</title>
-      <link>https://hugo-profile.netlify.app/tags/helm/</link>
+      <link>https://vsrecio.com/tags/helm/</link>
       <pubDate>Tue, 04 Jul 2023 11:57:48 -0400</pubDate>
       
-      <guid>https://hugo-profile.netlify.app/tags/helm/</guid>
+      <guid>https://vsrecio.com/tags/helm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kubernetes</title>
-      <link>https://hugo-profile.netlify.app/tags/kubernetes/</link>
+      <link>https://vsrecio.com/tags/kubernetes/</link>
       <pubDate>Tue, 04 Jul 2023 11:57:48 -0400</pubDate>
       
-      <guid>https://hugo-profile.netlify.app/tags/kubernetes/</guid>
+      <guid>https://vsrecio.com/tags/kubernetes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Docker</title>
-      <link>https://hugo-profile.netlify.app/tags/docker/</link>
+      <link>https://vsrecio.com/tags/docker/</link>
       <pubDate>Mon, 17 May 2021 22:53:58 +0530</pubDate>
       
-      <guid>https://hugo-profile.netlify.app/tags/docker/</guid>
+      <guid>https://vsrecio.com/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Golang</title>
-      <link>https://hugo-profile.netlify.app/tags/golang/</link>
+      <link>https://vsrecio.com/tags/golang/</link>
       <pubDate>Mon, 17 May 2021 22:53:58 +0530</pubDate>
       
-      <guid>https://hugo-profile.netlify.app/tags/golang/</guid>
+      <guid>https://vsrecio.com/tags/golang/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CI/CD</title>
-      <link>https://hugo-profile.netlify.app/tags/ci/cd/</link>
+      <link>https://vsrecio.com/tags/ci/cd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo-profile.netlify.app/tags/ci/cd/</guid>
+      <guid>https://vsrecio.com/tags/ci/cd/</guid>
       <description></description>
     </item>
     

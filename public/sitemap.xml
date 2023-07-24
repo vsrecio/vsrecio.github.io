@@ -2,53 +2,53 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://hugo-profile.netlify.app/blogs/</loc>
+    <loc>https://vsrecio.com/blogs/</loc>
     <lastmod>2023-07-04T11:57:48-04:00</lastmod>
   </url><url>
-    <loc>https://hugo-profile.netlify.app/tags/containers/</loc>
+    <loc>https://vsrecio.com/tags/containers/</loc>
     <lastmod>2023-07-04T11:57:48-04:00</lastmod>
   </url><url>
-    <loc>https://hugo-profile.netlify.app/blogs/helm-3/</loc>
+    <loc>https://vsrecio.com/blogs/helm-3/</loc>
     <lastmod>2023-07-04T11:57:48-04:00</lastmod>
   </url><url>
-    <loc>https://hugo-profile.netlify.app/tags/deployment/</loc>
+    <loc>https://vsrecio.com/tags/deployment/</loc>
     <lastmod>2023-07-04T11:57:48-04:00</lastmod>
   </url><url>
-    <loc>https://hugo-profile.netlify.app/tags/devops/</loc>
+    <loc>https://vsrecio.com/tags/devops/</loc>
     <lastmod>2023-07-04T11:57:48-04:00</lastmod>
   </url><url>
-    <loc>https://hugo-profile.netlify.app/tags/golang-template/</loc>
+    <loc>https://vsrecio.com/tags/golang-template/</loc>
     <lastmod>2023-07-04T11:57:48-04:00</lastmod>
   </url><url>
-    <loc>https://hugo-profile.netlify.app/tags/helm/</loc>
+    <loc>https://vsrecio.com/tags/helm/</loc>
     <lastmod>2023-07-04T11:57:48-04:00</lastmod>
   </url><url>
-    <loc>https://hugo-profile.netlify.app/tags/kubernetes/</loc>
+    <loc>https://vsrecio.com/tags/kubernetes/</loc>
     <lastmod>2023-07-04T11:57:48-04:00</lastmod>
   </url><url>
-    <loc>https://hugo-profile.netlify.app/tags/</loc>
+    <loc>https://vsrecio.com/tags/</loc>
     <lastmod>2023-07-04T11:57:48-04:00</lastmod>
   </url><url>
-    <loc>https://hugo-profile.netlify.app/</loc>
+    <loc>https://vsrecio.com/</loc>
     <lastmod>2023-07-04T11:57:48-04:00</lastmod>
   </url><url>
-    <loc>https://hugo-profile.netlify.app/blogs/helm-2/</loc>
+    <loc>https://vsrecio.com/blogs/helm-2/</loc>
     <lastmod>2023-05-29T14:27:35-04:00</lastmod>
   </url><url>
-    <loc>https://hugo-profile.netlify.app/blogs/helm-1/</loc>
+    <loc>https://vsrecio.com/blogs/helm-1/</loc>
     <lastmod>2023-05-22T14:24:59-04:00</lastmod>
   </url><url>
-    <loc>https://hugo-profile.netlify.app/tags/docker/</loc>
+    <loc>https://vsrecio.com/tags/docker/</loc>
     <lastmod>2021-05-17T22:53:58+05:30</lastmod>
   </url><url>
-    <loc>https://hugo-profile.netlify.app/blogs/go-templates/</loc>
+    <loc>https://vsrecio.com/blogs/go-templates/</loc>
     <lastmod>2021-05-17T22:53:58+05:30</lastmod>
   </url><url>
-    <loc>https://hugo-profile.netlify.app/tags/golang/</loc>
+    <loc>https://vsrecio.com/tags/golang/</loc>
     <lastmod>2021-05-17T22:53:58+05:30</lastmod>
   </url><url>
-    <loc>https://hugo-profile.netlify.app/categories/</loc>
+    <loc>https://vsrecio.com/categories/</loc>
   </url><url>
-    <loc>https://hugo-profile.netlify.app/tags/ci/cd/</loc>
+    <loc>https://vsrecio.com/tags/ci/cd/</loc>
   </url>
 </urlset>

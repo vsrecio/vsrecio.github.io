@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Demystify Helm: Introduction on VSR Profile</title>
-    <link>https://hugo-profile.netlify.app/blogs/helm-1/</link>
+    <link>https://vsrecio.com/blogs/helm-1/</link>
     <description>Recent content in Demystify Helm: Introduction on VSR Profile</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 22 May 2023 14:24:59 -0400</lastBuildDate><atom:link href="https://hugo-profile.netlify.app/blogs/helm-1/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 May 2023 14:24:59 -0400</lastBuildDate><atom:link href="https://vsrecio.com/blogs/helm-1/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
