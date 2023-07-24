@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DevOps on VSR Profile</title>
-    <link>https://hugo-profile.netlify.app/tags/devops/</link>
+    <link>https://vsrecio.com/tags/devops/</link>
     <description>Recent content in DevOps on VSR Profile</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Jul 2023 11:57:48 -0400</lastBuildDate><atom:link href="https://hugo-profile.netlify.app/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 Jul 2023 11:57:48 -0400</lastBuildDate><atom:link href="https://vsrecio.com/tags/devops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Create a Helm Chart Repository using Github</title>
-      <link>https://hugo-profile.netlify.app/blogs/helm-3/</link>
+      <link>https://vsrecio.com/blogs/helm-3/</link>
       <pubDate>Tue, 04 Jul 2023 11:57:48 -0400</pubDate>
       
-      <guid>https://hugo-profile.netlify.app/blogs/helm-3/</guid>
+      <guid>https://vsrecio.com/blogs/helm-3/</guid>
       <description>Create a Helm Chart Repository using Github A Helm Chart Repository is simply a place where Helm Charts are stored and shared. Charts are packages of Kubernetes resource descriptions, i.e., they are the smallest deployable and manageable unit of Helm. A Helm Chart Repository is quite similar to package repositories from other package management systems, such as those used by npm (for Node.js) or apt (for Debian/Ubuntu). Like these, Helm repositories allow sharing applications as packages.</description>
     </item>
     
     <item>
       <title>Demystify Helm: Managing</title>
-      <link>https://hugo-profile.netlify.app/blogs/helm-2/</link>
+      <link>https://vsrecio.com/blogs/helm-2/</link>
       <pubDate>Mon, 29 May 2023 14:27:35 -0400</pubDate>
       
-      <guid>https://hugo-profile.netlify.app/blogs/helm-2/</guid>
+      <guid>https://vsrecio.com/blogs/helm-2/</guid>
       <description>Installing Helm In order to continue with our series of articles about Helm package manager, you need to first install it on your system. If you&amp;rsquo;re running Linux, the process is straightforward. Here&amp;rsquo;s a step-by-step guide:
 Step 1: Prerequisites Ensure that you have the following installed and correctly configured:
  Kubernetes: Helm is a package manager for Kubernetes, so you must have a Kubernetes cluster running.  minikube: minikube is local Kubernetes, focusing on making it easy to learn and develop for Kubernetes.</description>
@@ -29,10 +29,10 @@ Step 1: Prerequisites Ensure that you have the following installed and correctly
     
     <item>
       <title>Demystify Helm: Introduction</title>
-      <link>https://hugo-profile.netlify.app/blogs/helm-1/</link>
+      <link>https://vsrecio.com/blogs/helm-1/</link>
       <pubDate>Mon, 22 May 2023 14:24:59 -0400</pubDate>
       
-      <guid>https://hugo-profile.netlify.app/blogs/helm-1/</guid>
+      <guid>https://vsrecio.com/blogs/helm-1/</guid>
       <description>If you&amp;rsquo;ve worked with Kubernetes, you&amp;rsquo;ll know that managing it and deploying applications can be complex. With so many components to configure and manage, such as services, pods, and persistent volumes, it&amp;rsquo;s easy to get lost in the sea of options available and If we add that we must also deploy these components to different environments, all this increases the degree of difficulty of managing Kubernetes. . This is where Helm comes into play.</description>
     </item>
     
