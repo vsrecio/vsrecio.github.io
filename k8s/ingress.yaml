@@ -10,10 +10,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - profile.vsrl.lat
-    secretName: profile-vsrl-tls
+    - profile.vsr.lat
+    secretName: profile-vsr-tls
   rules:
-  - host: profile.vsrl.lat
+  - host: profile.vsr.lat
     http:
       paths:
       - path: /
