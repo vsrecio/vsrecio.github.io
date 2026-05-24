@@ -2,38 +2,27 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
-      - master # Adjust if your default branch is different
-
-permissions:
-  contents: write
+    branches: 'main'
 
 jobs:
-  build-and-deploy:
-    concurrency: ci-${{ github.ref }}
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v4
-
-      - name: Install and Build 🔧
-        uses: actions/configure-pages@v4 # Installs dependencies and builds the Vite site
+      - uses: actions/checkout@v4
       
-      - name: Setup Node.js 🟢
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-
-      - name: Install dependencies 📦
+          
+      - name: Install dependencies
         run: npm ci
-
-      - name: Build static site 🚀
-        run: npm run build
-
-      - name: Deploy to GitHub Pages 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+        
+      - name: Build site
+        run: npm run build # Esto genera tu carpeta /dist
+        
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          folder: dist # Vite builds into dist folder
-          branch: gh-pages # Deploys the built files to gh-pages branch
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist # Aquí le dices a GitHub qué carpeta publicar
