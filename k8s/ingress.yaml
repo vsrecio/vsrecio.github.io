@@ -10,21 +10,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - vsr.lat
-    - www.vsr.lat
-    secretName: vsr-lat-tls
+    - profile.vsrl.lat
+    secretName: profile-vsrl-tls
   rules:
-  - host: vsr.lat
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: site-vsrlat
-            port:
-              number: 80
-  - host: www.vsr.lat
+  - host: profile.vsrl.lat
     http:
       paths:
       - path: /
