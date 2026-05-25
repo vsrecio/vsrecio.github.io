@@ -351,3 +351,107 @@ h2 {
     width: 100%;
   }
 }
+
+/* ConvertKit/Kit Form Style Reset & Overrides */
+.formkit-form,
+.seva-form,
+[data-uid="ad61af790c"] {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: 100% !important;
+  font-family: var(--font-main) !important;
+  box-shadow: none !important;
+}
+
+.formkit-form .formkit-header,
+.formkit-form .formkit-subheader,
+.seva-form .formkit-header,
+.seva-form .formkit-subheader {
+  display: none !important;
+}
+
+.formkit-form .formkit-fields,
+.seva-form .formkit-fields {
+  display: flex !important;
+  gap: 0.5rem !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.formkit-form .formkit-field,
+.seva-form .formkit-field {
+  flex: 1 !important;
+  margin: 0 !important;
+}
+
+.formkit-form .formkit-input,
+.seva-form .formkit-input {
+  width: 100% !important;
+  background: rgba(0, 0, 0, 0.2) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: var(--radius-sm) !important;
+  padding: 0.8rem 1rem !important;
+  color: var(--text-primary) !important;
+  font-family: var(--font-main) !important;
+  font-size: 0.95rem !important;
+  outline: none !important;
+  transition: var(--transition) !important;
+  height: 48px !important;
+  box-shadow: none !important;
+}
+
+.formkit-form .formkit-input:focus,
+.seva-form .formkit-input:focus {
+  border-color: var(--accent-blue) !important;
+  box-shadow: 0 0 0 2px rgba(62, 176, 249, 0.2) !important;
+}
+
+.formkit-form .formkit-submit,
+.seva-form .formkit-submit {
+  background: var(--accent-blue) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: var(--radius-sm) !important;
+  padding: 0.8rem 1.2rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  font-family: var(--font-main) !important;
+  font-size: 0.95rem !important;
+  transition: var(--transition) !important;
+  height: 48px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+.formkit-form .formkit-submit:hover,
+.seva-form .formkit-submit:hover {
+  background: #2a9df4 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 5px 15px rgba(62, 176, 249, 0.3) !important;
+}
+
+.formkit-form .formkit-guarantee,
+.formkit-form .formkit-powered-by,
+.seva-form .formkit-guarantee,
+.seva-form .formkit-powered-by {
+  display: none !important;
+}
+
+@media (max-width: 480px) {
+  .formkit-form .formkit-fields,
+  .seva-form .formkit-fields {
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+  }
+  .formkit-form .formkit-submit,
+  .seva-form .formkit-submit {
+    width: 100% !important;
+  }
+}
+
